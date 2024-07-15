@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <aside className="bg-sidebar text-white w-64 min-h-screen">
+    <aside className="bg-gray text-white w-64 min-h-screen">
       <div className="p-8">
         <div className="bg-custom-gradient w-20 h-5 rounded"></div>
         <ul className="pt-8">
