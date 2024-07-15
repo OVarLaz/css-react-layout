@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sidebar: "#343951",
+        gray: "#343951",
         "base-gray": "#464C61",
         "line-gray": "#E0E7F1",
         "main-gray": "#F5F6FC",
@@ -12,6 +12,7 @@ module.exports = {
         "primary-blue": "#689FF8",
         "primary-green": "#4AC29D",
         "primary-gray": "#BCBECA",
+        "primary-red": "#FF6860",
         "secondary-orange": "#FFB233",
         "secondary-gray": "#BEC0C8",
         "tertiary-gray": "#858A9D",
