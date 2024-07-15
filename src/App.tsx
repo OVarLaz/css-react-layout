@@ -1,8 +1,8 @@
 // src/App.tsx
 import React from "react";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import Home from "./components/Home";
+import Header from "./views/components/Header";
+import Sidebar from "./views/components/Sidebar";
+import Home from "./views/layouts/Home";
 
 const App: React.FC = () => {
   return (
