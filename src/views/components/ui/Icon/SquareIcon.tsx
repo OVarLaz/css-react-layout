@@ -1,6 +1,10 @@
 import React from "react";
 
-const SquareIcon: React.FC = () => {
+interface SquareIconProps {
+  color?: string;
+}
+
+const SquareIcon: React.FC<SquareIconProps> = ({ color = "white" }) => {
   return (
     <svg
       width="15"
@@ -9,7 +13,7 @@ const SquareIcon: React.FC = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="0.5" y="0.5" width="14" height="14" stroke="white" />
+      <rect x="0.5" y="0.5" width="14" height="14" stroke={color} />
     </svg>
   );
 };
