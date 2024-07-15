@@ -1,5 +1,5 @@
 import React from "react";
-import { SquareIcon, PlusIcon } from "./ui/Icon";
+import { SquareIcon, PlusIcon } from "../ui/Icon";
 
 const Sidebar: React.FC = () => {
   const actions = {
