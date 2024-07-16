@@ -28,13 +28,13 @@ const Home: React.FC = () => {
   return (
     <main className="flex h-full">
       <div className="w-[80%] h-full flex flex-col mx-5 bg-main-gray">
-        <div className="w-full py-8 px-6">
+        <div className="w-full pt-8 pb-10 px-6">
           <SearchInput />
         </div>
-        <div className="w-full pb-8 px-6">
+        <div className="w-full pb-12 px-6">
           <RecentlyUsed />
         </div>
-        <div className="w-full pb-8 px-6">
+        <div className="w-full pb-12 px-6">
           <RecentFiles />
         </div>
         <div className="w-full pb-8 px-6">
@@ -47,13 +47,13 @@ const Home: React.FC = () => {
             <div className="bg-icon-gray w-4 h-4"></div>
             <div className="bg-icon-gray w-4 h-4 ml-2"></div>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             <span className="mr-2">Name</span>
             <div className="bg-icon-gray rounded-full w-8 h-8"></div>
           </div>
         </div>
         <div className="h-0.5 w-full bg-line-gray"></div>
-        <div className="mb-4 px-8 py-6">
+        <div className="px-8 py-6">
           <Title name="Storage" />
         </div>
         <StorageChart storageData={storageData} />
@@ -62,9 +62,16 @@ const Home: React.FC = () => {
             420.2 GB of 500 GB used
           </p>
           <div className="mt-8 space-y-2">
-            {storageData.map((item) => (
-              <div key={item.id} className="flex items-center justify-between">
-                <div className="flex items-center ">
+            {storageData.map((item, index) => (
+              <div
+                key={item.id}
+                className={`flex items-center justify-between pb-2 ${
+                  index !== storageData.length - 1
+                    ? "border-b border-line-gray"
+                    : ""
+                }`}
+              >
+                <div className="flex items-center">
                   <div
                     className={`w-8 h-8 rounded-xl mr-2 ${getColor(item.id)}`}
                   ></div>
@@ -75,7 +82,6 @@ const Home: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="bg-white w-14 h-6 rounded text-xxs flex items-center justify-center">
                   {item.size} GB
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SquareIcon, PlusIcon, SubtractIcon } from "../ui/Icon";
+import { SquareIcon, PlusIcon, SubtractIcon, PolygonIcon } from "../ui/Icon";
 
 const Sidebar: React.FC = () => {
   const [activeItem] = useState("/home");
@@ -54,16 +54,21 @@ const Sidebar: React.FC = () => {
       </div>
       <div className="h-0.5 w-full bg-base-gray"></div>
       <div className="p-8 h-1/2 flex flex-col justify-end">
-        <ul className="bg-base-gray rounded-lg p-4 mb-8">
-          {Object.entries(actions).map(([key, action]) => (
-            <li key={key} className="mb-2 flex items-center">
-              <SquareIcon />
-              <a href={action.url} className="ml-2 text-secondary-gray">
-                {action.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="relative mb-8">
+          <ul className="bg-base-gray rounded-lg p-4 ">
+            {Object.entries(actions).map(([key, action]) => (
+              <li key={key} className="mb-2 flex items-center">
+                <SquareIcon />
+                <a href={action.url} className="ml-2 text-secondary-gray">
+                  {action.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="relative left-4 -top-0">
+            <PolygonIcon />
+          </div>
+        </div>
         <div className="flex items-center w-full h-10 bg-primary-orange rounded">
           <div className="w-[80%] flex justify-center">
             <span>Create New</span>
