@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "../ui/Title";
 
 const ShareWithMe = () => {
   const sharedFiles = [
@@ -24,7 +25,9 @@ const ShareWithMe = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Share with me</h2>
+        <div className="mb-1">
+          <Title name="Share with me" />
+        </div>
         <a href="#" className="text-xs">
           View All
         </a>

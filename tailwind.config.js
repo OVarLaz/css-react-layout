@@ -18,6 +18,9 @@ module.exports = {
         "tertiary-gray": "#858A9D",
         "icon-gray": "#C4C4C4",
       },
+      fontFamily: {
+        sans: ["Roboto", "ui-sans-serif", "system-ui"],
+      },
       fontSize: {
         tiny: "0.5rem",
         xxs: "0.65rem",

@@ -5,7 +5,7 @@ import Sidebar from "./views/components/Sidebar";
 
 const App: React.FC = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen font-sans">
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Home />

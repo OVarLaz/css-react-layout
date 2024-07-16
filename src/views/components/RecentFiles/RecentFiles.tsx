@@ -1,5 +1,6 @@
 import React from "react";
 import { ActionDotsIcon } from "../ui/Icon";
+import Title from "../ui/Title";
 
 const files = [
   {
@@ -36,7 +37,9 @@ const RecentFiles = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Recent Files</h2>
+        <div className="mb-1">
+          <Title name="Recent Files" />
+        </div>
         <a href="#" className="text-xs">
           View All
         </a>

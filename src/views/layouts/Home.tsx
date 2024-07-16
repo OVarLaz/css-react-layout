@@ -5,6 +5,7 @@ import SearchInput from "../components/ui/SearchInput/SearchInput";
 import RecentFiles from "../components/RecentFiles";
 import RecentlyUsed from "../components/RecentlyUsed";
 import ShareWithMe from "../components/ShareWithMe";
+import Title from "../components/ui/Title";
 
 const Home: React.FC = () => {
   const storageData = [
@@ -30,13 +31,13 @@ const Home: React.FC = () => {
         <div className="w-full py-8 px-6">
           <SearchInput />
         </div>
-        <div className="w-full py-8 px-6">
+        <div className="w-full pb-8 px-6">
           <RecentlyUsed />
         </div>
-        <div className="w-full py-8 px-6">
+        <div className="w-full pb-8 px-6">
           <RecentFiles />
         </div>
-        <div className="w-full py-8 px-6">
+        <div className="w-full pb-8 px-6">
           <ShareWithMe />
         </div>
       </div>
@@ -52,7 +53,9 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="h-0.5 w-full bg-line-gray"></div>
-        <h2 className="text-xl font-semibold mb-4 px-8 py-6">Storage</h2>
+        <div className="mb-4 px-8 py-6">
+          <Title name="Storage" />
+        </div>
         <StorageChart storageData={storageData} />
         <div className="text-gray-700 px-8">
           <p className="text-tertiary-gray text-tiny flex justify-center mt-2">

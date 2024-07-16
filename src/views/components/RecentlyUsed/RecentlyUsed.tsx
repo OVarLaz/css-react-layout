@@ -1,5 +1,6 @@
 import React from "react";
 import { SquareIcon } from "../ui/Icon";
+import Title from "../ui/Title";
 
 const RecentlyUsed: React.FC = () => {
   const sharedFiles = [
@@ -25,7 +26,9 @@ const RecentlyUsed: React.FC = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Share with me</h2>
+        <div className="mb-1">
+          <Title name="Recently Used" />
+        </div>
         <div className="flex">
           <SquareIcon color={"#343951"} />
           <div className="ml-2" />
