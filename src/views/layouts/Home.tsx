@@ -1,5 +1,10 @@
 import React from "react";
 import StorageChart from "../components/Chart/StorageChart";
+import BuySection from "../components/BuySection";
+import SearchInput from "../components/ui/SearchInput/SearchInput";
+import RecentFiles from "../components/RecentFiles";
+import RecentlyUsed from "../components/RecentlyUsed";
+import ShareWithMe from "../components/ShareWithMe";
 
 const Home: React.FC = () => {
   const storageData = [
@@ -21,7 +26,20 @@ const Home: React.FC = () => {
 
   return (
     <main className="flex h-screen">
-      <div className="w-[80%] h-full flex mx-5 bg-main-gray"></div>
+      <div className="w-[80%] h-full flex flex-col mx-5 bg-main-gray">
+        <div className="w-full py-8 px-6">
+          <SearchInput />
+        </div>
+        <div className="w-full py-8 px-6">
+          <RecentlyUsed />
+        </div>
+        <div className="w-full py-8 px-6">
+          <RecentFiles />
+        </div>
+        <div className="w-full py-8 px-6">
+          <ShareWithMe />
+        </div>
+      </div>
       <div className="w-[20%] h-full flex flex-col bg-main-gray">
         <div className="p-8 flex justify-between items-center">
           <div className="flex">
@@ -63,18 +81,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="p-8 w-full">
-          <div className=" bg-white rounded-lg flex flex-col items-center">
-            <div className="bg-custom-gradient w-36 h-20 rounded-lg mt-6"></div>
-            <div className="flex flex-col py-4">
-              <span className="text-xs">Buy more space now!</span>
-              <span className="text-tertiary-gray text-tiny">
-                Upgrade to cloud premium
-              </span>
-            </div>
-            <div className="mb-6 flex items-center justify-center w-36 h-10 bg-primary-orange rounded text-white text-xxs">
-              Upgrade Account!
-            </div>
-          </div>
+          <BuySection />
         </div>
       </div>
     </main>
