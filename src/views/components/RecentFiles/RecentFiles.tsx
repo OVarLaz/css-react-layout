@@ -33,6 +33,10 @@ const files = [
   },
 ];
 
+const handleClick = () => {
+  console.log("this a link...");
+};
+
 const RecentFiles = () => {
   return (
     <div>
@@ -40,9 +44,9 @@ const RecentFiles = () => {
         <div className="mb-1">
           <Title name="Recent Files" />
         </div>
-        <a href="#" className="text-xs">
+        <button onClick={handleClick} className="text-xs">
           View All
-        </a>
+        </button>
       </div>
       <div className="grid grid-cols-3 gap-4 text-xs font-medium text-tertiary-gray mb-2">
         <div>Name</div>

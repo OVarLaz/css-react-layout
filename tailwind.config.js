@@ -15,6 +15,7 @@ module.exports = {
         "primary-red": "#FF6860",
         "secondary-orange": "#FFB233",
         "secondary-gray": "#BEC0C8",
+        "tertiary-orange": "#FFD999",
         "tertiary-gray": "#858A9D",
         "icon-gray": "#C4C4C4",
       },
@@ -29,6 +30,9 @@ module.exports = {
         "custom-gradient":
           "linear-gradient(to right, #FF9F00, #FF6860, #689EF8)",
       }),
+      boxShadow: {
+        custom: "0px 4px 16px 0px #3A3A3A12",
+      },
     },
   },
   plugins: [],

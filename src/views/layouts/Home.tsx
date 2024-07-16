@@ -26,7 +26,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <main className="flex h-screen">
+    <main className="flex h-full">
       <div className="w-[80%] h-full flex flex-col mx-5 bg-main-gray">
         <div className="w-full py-8 px-6">
           <SearchInput />
